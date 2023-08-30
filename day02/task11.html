@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 输出素数
+        let n = 20;
+        nextPrime:
+        for (let i = 2; i <= n; i++) {
+            for (let j = 2; j <= i ** (1/2); j++) {
+                if (!(i % j)) continue nextPrime;
+            }
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

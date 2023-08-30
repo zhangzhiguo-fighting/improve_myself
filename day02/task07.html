@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //如下代码将会输出什么？
+        alert( null || 2 || undefined ); // 2
+
+        alert( alert(1) || 2 || alert(3) ); // 1
+
+        //下面这段代码将会显示什么？
+        alert( 1 && null && 2 ); // null
+
+        alert( alert(1) && alert(2) ); // 1  2    先计算第一个操作数，若为真再开始计算第二个操作数
+
+        //果将会是什么?
+        alert( null || 2 && 3 || 4 ); // 3
+
+        //写一个 if 条件句来检查 age 是否位于 14 到 90 的闭区间
+        let age = 50;
+        if (age >= 14 && age <= 90) {
+            console.log("Yes!");
+        } else {
+            console.log("No!");
+        }
+
+        //写一个 if 条件句，检查 age 是否不位于 14 到 90 的闭区间
+        if (!(age >= 14 && age <= 90));
+        if (age < 14 || age > 90);
+
+        //下面哪一个 alert 将会被执行？ 1 和 3 会被执行
+        //if(...) 语句内表达式的结果是什么？
+        // 1
+        if (-1 || 0) alert( 'first' ); // if 内 -1
+        // 2
+        if (-1 && 0) alert( 'second' ); // if 内 0
+        // 3
+        if (null || -1 && 1) alert( 'third' ); // if 内 1
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

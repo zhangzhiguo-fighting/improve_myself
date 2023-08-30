@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        //此代码最后一次 alert 值是多少？为什么？
+        /* 
+        let i = 3;
+        while (i) {
+             alert( i-- ); // 1 
+             //i为1进入循环，输出后，自减为0，不能进入下一次循环
+        }
+        */
+
+        //以下两个循环的 alert 值是否相同？
+        //前缀形式 ++i
+        /*
+        let i = 0;
+        while (++i < 5) alert( i ); // i的值 1 ～ 4
+        */
+        //后缀形式 i++
+        /*
+        let i = 0;
+        while (i++ < 5) alert( i ); // i的值 1 ～ 5
+        */
+
+        //两次循环 alert 值是否相同？   
+        //i++和++i 都是在alert前执行，结果都为 1 ～ 4
+        //1.后缀形式：
+        //for (let i = 0; i < 5; i++) alert( i );
+
+        //2.前缀形式：
+        //for (let i = 0; i < 5; ++i) alert( i );
+
+        //使用for循环输出偶数
+        // for (let i = 2; i <= 10; i++) {
+        //     if (!(i % 2)) {
+        //         console.log(i);
+        //     }
+        // }
+
+        //使用while循环输出偶数
+        let i = 2;
+        while(i <= 10) {
+            if (i % 2) {
+                i++;
+                continue;
+            }
+            console.log(i);
+            i++;
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
